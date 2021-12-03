@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:mydevapp/getx_state_manegement/model.dart';
 
 // class RemoteServices {
@@ -33,7 +32,6 @@ class RemoteServices {
       var jsonString = response.body;
       return dataFormUserFromJson(jsonString);
     } else {
-      //show error message
       return null!;
     }
   }

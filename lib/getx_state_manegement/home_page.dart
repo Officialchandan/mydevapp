@@ -25,7 +25,32 @@ class ProductHomePage extends StatelessWidget {
               Icons.shopping_cart,
             ),
             onPressed: () {},
-          )
+          ),
+          // GetBuilder<ProductController>(builder: (context) {
+          //   return Switch(
+          //       value: productController.isDark.value,
+          //       onChanged: (state) {
+          //         print("mystate $state");
+          //         productController.changeTheme(state);
+          //       });
+          // })
+          // GetX<ProductController>(builder: (productController) {
+          //   return Switch(
+          //       value: productController.isDark.value,
+          //       onChanged: (state) {
+          //         print("mystate $state");
+          //         productController.changeTheme(state);
+          //       });
+          // }),
+
+          Obx(() {
+            return Switch(
+                value: productController.isDark.value,
+                onChanged: (state) {
+                  print("mystate $state");
+                  productController.changeTheme(state);
+                });
+          })
         ],
       ),
       body: Column(
